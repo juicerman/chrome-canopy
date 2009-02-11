@@ -59,7 +59,7 @@ img {
 }
 
 #control a {
-	color: #cbcbcb;
+	color: #bebebe;
 	display: block;
 	float: left;
     padding: 6px 7px 6px 7px;
@@ -100,7 +100,6 @@ img {
 }
 #control a.play.selected {
     background: #8bf200 url(img/playpause.png) no-repeat 0 -35px;
-<<<<<<< .mine
 }
 
 
@@ -129,6 +128,4 @@ img {
 #about div.badge {
     float: right;
     padding: 0 0 10px 10px;
-}=======
 }
->>>>>>> .r95
