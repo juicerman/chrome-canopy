@@ -1,8 +1,8 @@
 <?php
 
 define('COMBI_FILENAME', 'js/the_beast.js');
-define('JSMIN_COMPRESS', false);
-define('JSMIN_COMMENTS', "Just A Grip of Code Compiled From Various Files\n// Check ./js for human readable source");
+define('JSMIN_COMPRESS', true);
+define('JSMIN_COMMENTS', "Just A Grip of Code Compiled From Various Files\n// Check http://code.google.com/p/chrome-canopy/source/browse/ for something more human readable ;)");
 
 // files to merge
 $files = array(
