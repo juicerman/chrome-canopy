@@ -30,11 +30,11 @@ function toggle(which, state)
                 aboutOn = !aboutOn;
                 state = aboutOn;
             }
+            var about = $("#about");
             if(aboutOn) {
-                var about = $("#about");
                 about.css({
-                    left: window.innerWidth / 2 - about.width() / 2,
-                    top: window.innerHeight / 2 - about.height() / 2
+                    left: window.innerWidth / 2 - (about.width()+28) / 2,
+                    top: window.innerHeight / 2 - (about.height()+28) / 2
                 });
                 about.fadeIn(200);
                 $(document).one("mousedown", function(){
@@ -42,7 +42,7 @@ function toggle(which, state)
                 });
             }
             else {
-                $("#about").fadeOut(200);
+                about.fadeOut(200);
             }
             break;
             
@@ -143,6 +143,6 @@ function fadeBg(r, g, b, dur)
     	    bgColor = fadeBgTo;
     	}
     	$(document.body).css("background-color", "rgb(" + Math.floor(bgColor[0]) + "," + Math.floor(bgColor[1]) + "," + Math.floor(bgColor[2]) + ")");
-	}, 13);
+    }, 13);
 }
 var fadeBgTimerId, fadeBgFading, fadeBgFrom, fadeBgTo, fadeBgStart;
