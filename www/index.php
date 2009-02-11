@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>ArborFall</title>
+    <title>Chrome Canopy</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script src="<?php require('../lib/combi_js.php'); ?>" type="application/javascript"></script>
 </head>
@@ -29,7 +29,7 @@
         <div class="badge">
             <a href="http://chromeexperiments.com"><img src="img/badge.png" width="140" height="72" /></a>
         </div>
-        <h1>ArborFall</h1>
+        <h1>Chrome Canopy</h1>
         <p>
             ..is a fractal zoomer. Press play to start falling. Click to go faster. You'll need a web browser with a fast JavaScript engine like <a href="http://www.google.com/chrome">Google Chrome</a> or <a href="http://nightly.webkit.org/">WebKit Nightly</a>.
         </p>
