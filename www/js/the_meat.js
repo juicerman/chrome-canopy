@@ -153,13 +153,6 @@ function justDraw()
     }
     
     
-    /*if(!playing && paintTool == ERASE) {
-        g.fill(200,128);
-        g.noStroke();
-        g.circle(mouse.x,mouse.y, paintRadius);
-    }*/
-    
-    
     // transform the scene
     
     if(playing && closest) {
@@ -215,27 +208,6 @@ function endFlowerMoment()
 function onMouseDown(e)
 {
     mouse.down = true;
-    
-    /*if(!playing) {
-        switch(paintTool)
-        {
-            case PAINT:
-                console.log(mouseBranch);
-                if(!mouseBranch) {
-                    mouseBranch = new Branch({
-                        style: paintStyle,
-                        growDur: 0
-                    });
-                    mouseBranch.pushCv(new Vec2(mouse.x, mouse.y));
-                    console.log("new");
-                }
-                console.log(mouseBranch);
-                break;
-                
-            case ERASE:
-                break;
-        }
-    }*/
 }
 
 function onMouseMove(e)
