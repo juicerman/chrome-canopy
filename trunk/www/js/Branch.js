@@ -261,25 +261,6 @@ Branch.prototype =
     {
         var n = Math.floor(this.twigRule.nbr[0]);
         if(branches.length + n < maxBranches) {
-            /*var flowerIdx = -1;
-            if(flower && this.twigRule.flower && brSinceLastFlower > brTilNextFlower) {
-                //flowerIdx = randInt(n);
-                for(var i=clamp(maxBranches - n, 1, 32); --i>=0;) {
-                    var side = Math.round(so.side[i % so.side.length]);
-                    this.twig(Math.random(), FLOWER, {
-                        angle:  side ? so.angle[i % so.angle.length] : Math.PI - so.angle[i % so.angle.length],
-                        crook:  0.2,
-                        len:    0.5,
-                        weight: this.weight / 2,
-                        ncv:    8
-                    });
-                }
-                
-                // only allow one flowering branch
-                brSinceLastFlower = 0;
-                brTilNextFlower = randInt2(2000,3000);
-            }*/
-            
             for(var i=this.leaves.length; --i >= 0;)
                 this.leaves[i].detach();
             
@@ -464,89 +445,9 @@ Branch.draw_spike = function(br)
         );
         
         g.endPath();
-        
-        
-        // draw the cap, if any. (for flowers)
-        /*if(br.cap) {
-            if(tip) {
-                br.cap.draw(tip[4], tip[5], Math.atan2(tip[5]-tip[3], tip[4]-tip[2]), w * br.uease);
-            } else {
-                var b = uint * 3;
-                br.cap.draw(br.bez[b].x, br.bez[b].y, Math.atan2(br.bez[b].y-br.bez[b-1].y, br.bez[b].x-br.bez[b-1].x), w * br.uease);
-            }
-        }*/
     }
 };
 
-/*Branch.draw_stroke = function(br)
-{
-    if(br.cv.length > 0 && br.uease > 0) {
-        var u = br.uease * (br.cv.length-1);
-        var uint = Math.floor(u);
-        var uf = u - uint;
-        
-        g.stroke.apply(g, br.color);
-        g.noFill();
-        g.lineWidth(br.weight * br.bounds.hyp * 2);
-        
-        g.beginPath();
-        g.moveTo(br.bez[0].x, br.bez[0].y);
-        
-        var nb = uint * 3 + 1;
-        for(var i=1; i < nb; i += 3) {
-            g.bezierTo(1, br.bez[i].x, br.bez[i].y, br.bez[i+1].x, br.bez[i+1].y, br.bez[i+2].x, br.bez[i+2].y);
-        }
-        if(uf > 0) {
-            g.bezierTo(uf, br.bez[nb].x, br.bez[nb].y, br.bez[nb+1].x, br.bez[nb+1].y, br.bez[nb+2].x, br.bez[nb+2].y);
-        }
-        
-        g.endPath();
-    }
-};
-
-Branch.draw_flower = function(br)
-{
-    if(br.cv.length > 0 && br.uease > 0) {
-        var
-            u = br.uease * (br.cv.length-1),
-            uint = Math.floor(u),
-            uf = u - uint,
-            w = br.weight * br.bounds.hyp * br.uease
-        ;
-        
-        g.stroke.apply(g, br.color);
-        g.noFill();
-        g.lineWidth(w);
-        
-        g.beginPath();
-        g.moveTo(br.bez[0].x, br.bez[0].y);
-        
-        var nb = uint * 3 + 1;
-        for(var i=1; i < nb; i += 3) {
-            g.bezierTo(1, br.bez[i].x, br.bez[i].y, br.bez[i+1].x, br.bez[i+1].y, br.bez[i+2].x, br.bez[i+2].y);
-        }
-        if(uf > 0) {
-            g.bezierTo(uf, br.bez[nb].x, br.bez[nb].y, br.bez[nb+1].x, br.bez[nb+1].y, br.bez[nb+2].x, br.bez[nb+2].y);
-        }
-        
-        g.endPath();
-        
-        
-        g.fill.apply(g, br.color);
-        g.noStroke();
-        
-        var endx, endy;
-        if(uf > 0) {
-            endx = bezierPoint(br.bez[nb-1].x, br.bez[nb].x, br.bez[nb+1].x, br.bez[nb+2].x, uf);
-            endy = bezierPoint(br.bez[nb-1].y, br.bez[nb].y, br.bez[nb+1].y, br.bez[nb+2].y, uf);
-        } else {
-            endx = br.bez[nb-1].x;
-            endy = br.bez[nb-1].y;
-        }
-        
-        g.circle(endx,endy, w * 2);
-    }
-};*/
 
 Branch.ruleLimits = {
     nbr:   [6, 20],
