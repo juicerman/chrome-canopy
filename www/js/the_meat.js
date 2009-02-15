@@ -143,7 +143,8 @@ function justDraw()
     
     // get the closest branch to the mouse
     
-    var closest = findClosestTo(mouse);
+    sortByClosestToMouse();
+    var closest = branches[0];
     if(closest) {
         var ccv = closest.cv[Math.floor(closest.cv.length / 2)];
         origin.set(
@@ -175,14 +176,6 @@ function justDraw()
     
     
     cullOffscreen();
-    
-    if(g.frameCount % 30 == 0)
-        branches.sort(randomSort);
-}
-
-function randomSort(a, b)
-{
-    return Math.random() < 0.5 ? -1 : 1;
 }
 
 // END DISPLAY
@@ -354,25 +347,18 @@ function findIntersection(p1, p2)
     return null;
 }
 
-function findClosestTo(pos)
+
+function sortByClosestToMouse()
 {
-    if(branches.length == 1)
-        return branches[0];
-    
-    var br, closest;
-    var distsq = Number.MAX_VALUE;
-    
+    // set distances
     for(var i = branches.length; --i >= 0;) {
-        br = branches[i];
-        if(br.style == SPIKE && br.bounds.hyp < viewBounds.hyp){
-            var ctr_cv = br.cv[Math.floor(br.cv.length / 2)];
-            var ds = Vec2.distSq(pos, ctr_cv);
-            if(ds < distsq) {
-                distsq = ds;
-                closest = br;
-            }
-        }
+        var ctr_cv = branches[i].cv[Math.floor(branches[i].cv.length / 2)];
+        branches[i].distToMouse = Vec2.distSq(mouse, ctr_cv);
     }
     
-    return closest;
+    // sort the array
+    branches.sort(sortMouseDist);
+}
+function sortMouseDist(a, b) {
+    return b.distToMouse > a.distToMouse ? -1 : 1;
 }
