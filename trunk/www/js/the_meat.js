@@ -175,7 +175,18 @@ function justDraw()
     
     
     cullOffscreen();
+    
+    if(g.frameCount % 30 == 0)
+        branches.sort(randomSort);
 }
+
+function randomSort(a, b)
+{
+    return Math.random() < 0.5 ? -1 : 1;
+}
+
+// END DISPLAY
+
 
 
 function startFlowerMoment()
