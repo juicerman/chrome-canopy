@@ -360,5 +360,5 @@ function sortByClosestToMouse()
     branches.sort(sortMouseDist);
 }
 function sortMouseDist(a, b) {
-    return b.distToMouse > a.distToMouse ? -1 : 1;
+    return b.distToMouse < a.distToMouse && b.bounds.hyp < viewBounds.hyp ? 1 : -1;
 }
