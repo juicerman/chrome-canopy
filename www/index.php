@@ -31,7 +31,7 @@
         </div>
         <h1>Chrome Canopy</h1>
         <p>
-            ..is a fractal zoomer. Press play to start falling. Click to go faster. You'll need a web browser with a fast JavaScript engine like <a href="http://www.google.com/chrome">Google Chrome</a> or <a href="http://nightly.webkit.org/">WebKit Nightly</a>.
+            ..is a fractal zoomer. Press play to start falling. Click to go faster. You'll need a web browser with a fast JavaScript engine like <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.apple.com/safari/">Safari Beta 4</a> or <a href="http://nightly.webkit.org/">WebKit Nightly</a>.
         </p>
         <ul>
             <li><span class="key">space / p</span> &mdash; play / pause</li>
