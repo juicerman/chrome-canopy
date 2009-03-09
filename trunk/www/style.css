@@ -112,7 +112,7 @@ img {
 }
 #about a {
    	color: #000;
-   	text-decoration: line-through;
+    text-decoration: underline;
 }
 #about a:hover {
     text-decoration: none;
@@ -128,4 +128,14 @@ img {
 #about div.badge {
     float: right;
     padding: 0 0 10px 10px;
+}
+
+
+#aboutclear {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
