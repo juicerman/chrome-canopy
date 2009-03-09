@@ -36,12 +36,13 @@ function toggle(which, state)
                     left: window.innerWidth / 2 - (about.width()+28) / 2,
                     top: window.innerHeight / 2 - (about.height()+28) / 2
                 });
-                about.fadeIn(200);
-                $(document).one("mousedown", function(){
+                $("<div id=\"aboutclear\"></div>").insertBefore(about).one("mousedown", function(){
                     toggle("about", false);
                 });
+                about.fadeIn(200);
             }
             else {
+                $("#aboutclear").remove();
                 about.fadeOut(200);
             }
             break;
