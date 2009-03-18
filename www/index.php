@@ -41,7 +41,7 @@
             <li><span class="key">a</span> &mdash; show / hide this about box</li>
         </ul>
         <p>
-            Designed by <a href="http://flickr.com/photos/onecm">Ryan Alexander</a>
+            Designed by <a href="http://www.flickr.com/photos/onecm/collections/72157600014721312/">Ryan Alexander</a>
         </p>
     </div>
     <script type="text/javascript">
