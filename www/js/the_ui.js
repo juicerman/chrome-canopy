@@ -38,6 +38,7 @@ function toggle(which, state)
                 });
                 $("<div id=\"aboutclear\"></div>").insertBefore(about).one("mousedown", function(){
                     toggle("about", false);
+                    play();
                 });
                 about.fadeIn(200);
             }
