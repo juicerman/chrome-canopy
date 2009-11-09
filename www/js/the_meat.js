@@ -67,9 +67,14 @@ window.onload = function justInit()
     set_paint_style(SPIKE);
     toggle("mutate", false);
     toggle("flower", false);
-    toggle("about", true);
     
     initRoot();
+    
+    var hash = window.location.hash.substring(1);
+    if(hash == "play")
+        toggle("play", true);
+    else
+        toggle("about", true);
 };
 
 function initRoot()
