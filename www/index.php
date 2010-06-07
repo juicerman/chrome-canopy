@@ -31,7 +31,7 @@
         </div>
         <h1>Chrome Canopy</h1>
         <p>
-            ..is a fractal zoomer. Press play to start falling. Click to go faster. You'll need a web browser with a fast JavaScript engine like <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.apple.com/safari">Safari 4</a> or <a href="http://www.mozilla.com/firefox">Firefox 3.6</a>.
+            ..is a fractal zoomer. Press play to start falling. Click to go faster. You'll need a web browser with a fast JavaScript engine like <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.apple.com/safari">Safari</a> or <a href="http://www.mozilla.com/firefox">Firefox</a>.
         </p>
         <ul>
             <li><span class="key">space / p</span> &mdash; play / pause</li>
@@ -41,7 +41,7 @@
             <li><span class="key">a</span> &mdash; show / hide this about box</li>
         </ul>
         <p>
-            Designed by <a href="http://www.flickr.com/photos/onecm/collections/72157600014721312/">Ryan Alexander</a>
+            Designed by <a href="http://onecm.com">Ryan Alexander</a>
         </p>
     </div>
     <script type="text/javascript">
